@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.sparklab.ui.write.WriteFragment"
+        android:label="@string/tab_write"
+        tools:layout="@layout/fragment_write" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.sparklab.ui.replay.ReplyFragment"
+        android:label="@string/tab_replay"
+        tools:layout="@layout/fragment_reply" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.sparklab.ui.improve.ImproveFragment"
+        android:label="@string/tab_improve"
+        tools:layout="@layout/fragment_improve" />
+</navigation>

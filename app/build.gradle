@@ -1,0 +1,107 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    namespace 'com.sparklab.ai'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.sparklab.ai"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'androidx.annotation:annotation:1.3.0'
+
+    implementation 'com.jakewharton.rxbinding:rxbinding:1.0.1'
+    implementation 'com.facebook.android:facebook-share:15.2.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'com.github.Willena:Android_PhoneNumber_Input:1.3.2'
+
+    implementation 'com.robertlevonyan.view:MaterialChipView:3.0.5'
+    implementation('com.twitter.sdk.android:twitter:3.3.0@aar') {
+        transitive = true
+    }
+
+
+    def kotlin_version = "1.3.21"
+    def hilt_version = '2.33-beta'
+    def ktor_version = '1.5.4'
+    def lifecycle_version = '2.3.1'
+
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+/*    implementation("io.ktor:ktor-client-android:$ktor_version")
+    implementation("io.ktor:ktor-client-gson:$ktor_version")
+    implementation 'io.ktor:ktor-client-logging-native:1.3.1'
+    implementation 'io.ktor:ktor-client:2.2.1'
+    implementation "io.ktor:ktor-client-core:2.2.1"
+    implementation "io.ktor:ktor-client-okhttp:2.0.2"*/
+
+
+    implementation 'io.ktor:ktor-client-android:1.6.4'
+    implementation 'io.ktor:ktor-client-gson:1.6.4'
+    implementation 'io.ktor:ktor-client-serialization:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0'
+    implementation 'io.ktor:ktor-client-logging-jvm:1.6.4'
+    implementation "io.ktor:ktor-client-serialization:1.6.4"
+
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+
+    // android ktx
+    implementation 'androidx.activity:activity-ktx:1.2.3'
+
+    //hilt viewmodel
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3'
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
+
+
+}

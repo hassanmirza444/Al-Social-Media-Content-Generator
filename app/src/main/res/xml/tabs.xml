@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs size="@dimen/tab_size" space="@dimen/fab_margin">
+
+    <tab
+        inactiveColor="@color/purple_200"
+        activeColor="@color/purple_700"
+        text = "afd"
+        drawable="@drawable/ic_menu_camera"/>
+
+    <tab
+        inactiveColor="@color/purple_200"
+        activeColor="@color/purple_700"
+        drawable="@drawable/ic_menu_camera"/>
+
+    <tab
+        inactiveColor="@color/purple_200"
+        activeColor="@color/purple_700"
+        drawable="@drawable/ic_menu_camera"/>
+
+    <tab
+        inactiveColor="@color/purple_200"
+        activeColor="@color/purple_700"
+        drawable="@drawable/ic_menu_camera"/>
+</tabs>
